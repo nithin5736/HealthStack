@@ -1,0 +1,247 @@
+{
+  "admin": [
+    {
+      "password": "admin12345"
+    }
+  ],
+  "users": [
+    {
+      "firstname": "Prabhash",
+      "lastname": "Varma",
+      "username": "Prabha",
+      "email": "prabha@gmail.com",
+      "password": "prabha12345",
+      "confirmPassword": "prabha12345",
+      "usertype": "Consumer",
+      "cart": [],
+      "status": "active",
+      "transaction": "0",
+      "id": 1
+    },
+    {
+      "firstname": "Sri",
+      "lastname": "ram",
+      "username": "Sri ram",
+      "email": "sriram@gmail.com",
+      "password": "sriram12345",
+      "confirmPassword": "sriram12345",
+      "usertype": "Seller",
+      "cart": [],
+      "products": [],
+      "status": "active",
+      "transaction": "0",
+      "id": 2
+    },
+    {
+      "firstname": "Mohan",
+      "lastname": "Sai Krishna",
+      "username": "Mohan",
+      "email": "mohan@gmail.com",
+      "password": "mohan12345",
+      "confirmPassword": "mohan12345",
+      "usertype": "Seller",
+      "products": [],
+      "cart": [],
+      "status": "active",
+      "transaction": "0",
+      "id": 3
+    },
+    {
+      "firstname": "Bargav",
+      "lastname": "Koduri",
+      "username": "Tejaswi",
+      "email": "bargav@gmail.com",
+      "password": "bargav12345",
+      "confirmPassword": "bargav12345",
+      "usertype": "Seller",
+      "products": [],
+      "cart": [],
+      "status": "active",
+      "transaction": "0",
+      "id": 4
+    },
+    {
+      "firstname": "Lalith",
+      "lastname": "Kumar",
+      "username": "Lalith",
+      "email": "lalith@gmail.com",
+      "password": "lalith12345",
+      "confirmPassword": "lalith12345",
+      "usertype": "Seller",
+      "cart": [],
+      "products": [],
+      "status": "active",
+      "transaction": "0",
+      "id": 5
+    },
+    {
+      "firstname": "Bargav",
+      "lastname": "Reddy",
+      "username": "Bargav",
+      "email": "bargav@gmail.com",
+      "password": "bargav12345",
+      "confirmPassword": "bargav12345",
+      "usertype": "Seller",
+      "cart": [],
+      "products": [],
+      "status": "active",
+      "transaction": 0,
+      "id": 6
+    },
+    {
+      "firstname": "surya",
+      "lastname": "mopidevi",
+      "username": "arya",
+      "email": "pavitrasurya@gmail.com",
+      "password": "hEALTHsTACK@003",
+      "confirmPassword": "hEALTHsTACK@003",
+      "usertype": "Consumer",
+      "cart": [],
+      "status": "active",
+      "transaction": 0,
+      "id": 7
+    },
+    {
+      "firstname": "Ashrith",
+      "lastname": "Royal",
+      "username": "Royal",
+      "email": "royal@gmail.com",
+      "password": "royal12345",
+      "confirmPassword": "royal12345",
+      "usertype": "Consumer",
+      "cart": [],
+      "status": "active",
+      "transaction": 0,
+      "id": 8
+    },
+    {
+      "firstname": "Rohith",
+      "lastname": "Boppey",
+      "username": "Rohith",
+      "email": "rohith@gmail.com",
+      "password": "rohith12345",
+      "confirmPassword": "rohith12345",
+      "usertype": "Seller",
+      "cart": [],
+      "products": [],
+      "status": "active",
+      "transaction": 0,
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "img": "https://www.jiomart.com/images/product/original/490575438/dettol-antiseptic-liquid-550-ml-product-images-o490575438-p591041838-0-202203170500.jpg",
+      "productname": "Dettol",
+      "price": "120",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.shopify.com/s/files/1/0504/8841/0290/products/3_b701115b-db4e-4271-9360-129065265b2a_1024x1024.jpg?v=1632141382",
+      "productname": "Strepsils",
+      "price": "100",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 3,
+      "img": "https://m.media-amazon.com/images/I/71l9XTme4JL._SL1500_.jpg",
+      "productname": "Ensure",
+      "price": "160",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 4,
+      "img": "https://images-static.nykaa.com/media/catalog/product/b/a/ba495d2il00176_1.jpg?tr=w-500,pr-true",
+      "productname": "Inlife Diabetes Care",
+      "price": "129",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 5,
+      "img": "https://m.media-amazon.com/images/I/61jiC0ORycL._SL1500_.jpg",
+      "productname": "Pampers",
+      "price": "200",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 6,
+      "img": "https://m.media-amazon.com/images/I/712c4ebh71L._SL1500_.jpg",
+      "productname": "ProteinX",
+      "price": "530",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 7,
+      "img": "https://m.media-amazon.com/images/I/51ye7gOYXcL._SL1100_.jpg",
+      "productname": "Horlicks",
+      "price": "250",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 8,
+      "img": "https://www.bigbasket.com/media/uploads/p/xxl/405672_1-vicks-vaporub.jpg",
+      "productname": "Vicks",
+      "price": "40",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 9,
+      "img": "https://media.istockphoto.com/photos/closeup-of-medical-syringe-with-vaccine-picture-id1263021678?k=20&m=1263021678&s=612x612&w=0&h=9YxNnjBbewJ_-v96-11quc9NYzcKnpQOZqhKMGJ48CQ=",
+      "productname": "Syringe Needle",
+      "price": "120",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "id": 10,
+      "img": "https://m.media-amazon.com/images/I/61syVEQlZxL._SL1200_.jpg",
+      "productname": "Savlon",
+      "price": "70",
+      "status": "active",
+      "quantity": "1"
+    },
+    {
+      "productname": "Cornflakes",
+      "img": "https://www.bigbasket.com/media/uploads/p/xxl/251018_6-kelloggs-corn-flakes.jpg",
+      "price": "460",
+      "quantity": "2",
+      "status": "active",
+      "id": 11
+    },
+    {
+      "productname": "Museli",
+      "img": "https://m.media-amazon.com/images/I/91WcSFzcmwL._SL1500_.jpg",
+      "price": "512",
+      "quantity": "3",
+      "status": "active",
+      "id": 12
+    },
+    {
+      "productname": "Thermometer Dr Trust",
+      "img": "https://m.media-amazon.com/images/I/61eT2Cpr6lL.jpg",
+      "price": "350",
+      "quantity": "2",
+      "status": "active",
+      "id": 13
+    },
+    {
+      "productname": "Paracetamol",
+      "img": "https://5.imimg.com/data5/SELLER/Default/2022/9/IV/UY/CG/75459511/500mg-paracetamol-tablet-500x500.jpg",
+      "price": "100",
+      "quantity": "5",
+      "status": "active",
+      "id": 14
+    }
+  ],
+  "queries": []
+}
