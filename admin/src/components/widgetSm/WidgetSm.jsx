@@ -8,8 +8,8 @@ export default function WidgetSm() {
       <ul className="widgetSmList">
         <li className="widgetSmListItem">
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Surya</span>
+            <span className="widgetSmUserTitle">Seller</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -23,8 +23,8 @@ export default function WidgetSm() {
             className="widgetSmImg"
           /> */}
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Surya</span>
+            <span className="widgetSmUserTitle">Seller</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -38,8 +38,8 @@ export default function WidgetSm() {
             className="widgetSmImg"
           /> */}
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Surya</span>
+            <span className="widgetSmUserTitle">Seller</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -53,8 +53,8 @@ export default function WidgetSm() {
             className="widgetSmImg"
           /> */}
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Surya</span>
+            <span className="widgetSmUserTitle">Seller</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />
@@ -68,8 +68,8 @@ export default function WidgetSm() {
             className="widgetSmImg"
           /> */}
           <div className="widgetSmUser">
-            <span className="widgetSmUsername">Anna Keller</span>
-            <span className="widgetSmUserTitle">Software Engineer</span>
+            <span className="widgetSmUsername">Surya</span>
+            <span className="widgetSmUserTitle">Seller</span>
           </div>
           <button className="widgetSmButton">
             <Visibility className="widgetSmIcon" />

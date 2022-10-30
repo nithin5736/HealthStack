@@ -31,9 +31,9 @@ export default function Chart({ title, data, dataKey, grid }) {
 <YAxis></YAxis>
 <Legend />
 <Tooltip />
-<Line type="monotone" dataKey="Active User"
+<Line type="monotone" dataKey="Active Users"
     stroke="black" activeDot={{ r: 8 }} />
-<Line type="monotone" dataKey="ssd"
+<Line type="monotone" dataKey="Active Products"
     stroke="red" activeDot={{ r: 8 }} />
     {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
 </LineChart>
