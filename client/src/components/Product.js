@@ -31,7 +31,7 @@ const Product = ({ item }) => {
           setTotal(total + parseInt(item.price));
           return [...prevState, item];
         });
-        toast.success("Food item added to cart", {
+        toast.success("Item added to cart", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -42,7 +42,7 @@ const Product = ({ item }) => {
           theme: "colored",
         });
       } else {
-        toast.warning("Food item already exists in cart", {
+        toast.warning("Item already exists in cart", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,

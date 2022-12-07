@@ -47,7 +47,7 @@ export default function FeaturedInfo() {
         </div>
         <span className="featuredSub">Comparitvely</span>
       </div>
-      <div className="featuredItem">
+      {/* <div className="featuredItem">
         <span className="featuredTitle">Sales</span>
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">₹{total}</span>
@@ -56,7 +56,7 @@ export default function FeaturedInfo() {
           </span>
         </div>
         <span className="featuredSub">Comparaively</span>
-      </div>
+      </div> */}
       <div className="featuredItem">
         <span className="featuredTitle">Products</span>
         <div className="featuredMoneyContainer">
