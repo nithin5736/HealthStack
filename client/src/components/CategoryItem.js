@@ -9,7 +9,10 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Link to="/products" style={{ textDecoration: "none", color: "black" }}>
+        <Link
+          to={`/${item.type}`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Button>SHOP NOW</Button>
         </Link>
       </Info>

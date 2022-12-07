@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 const Login = () => {
+  const form = useRef();
   const navigate = useNavigate();
   const [user, setUser] = useState({
     username: "",
@@ -11,6 +13,7 @@ const Login = () => {
     password: "",
     usertype: "",
   });
+  const [u, setU] = useState({});
   const USER_KEY = "current user";
 
   const checkUser = async (user) => {
@@ -70,7 +73,7 @@ const Login = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    if (await checkUser(user) === false) {
+    if ((await checkUser(user)) === false) {
       navigate("/register");
     } else {
       navigate("/main");
@@ -84,13 +87,46 @@ const Login = () => {
     });
   };
 
+  const getEmail = () => {
+    axios
+      .get(`http://localhost:5000/users?email=${user.email}`)
+      .then((res) => {
+        setU(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const sendEmailHandler = () => {
+    // console.log(form.current.elements);
+    // console.log(u[0].password);
+    form.current.elements.password.value = u[0].password;
+    emailjs
+      .sendForm(
+        "service_sf3ocxq",
+        "template_7s8xlhf",
+        form.current,
+        "9jjEZ4Q1b7CYAn7Uu"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
-        <Form onSubmit={submitHandler}>
+        <Form ref={form} onSubmit={submitHandler}>
           <Input
             type="text"
+            name="name"
             placeholder="Username"
             value={user.username}
             onChange={(e) => {
@@ -101,6 +137,7 @@ const Login = () => {
           <Input
             type="email"
             placeholder="Email"
+            name="email"
             value={user.email}
             onChange={(e) => {
               setUser({ ...user, email: e.target.value });
@@ -111,6 +148,7 @@ const Login = () => {
             type="password"
             placeholder="Password"
             value={user.password}
+            name="password"
             onChange={(e) => {
               setUser({ ...user, password: e.target.value });
             }}
@@ -139,6 +177,18 @@ const Login = () => {
             />
             <Label>CONSUMER</Label>
           </Para>
+          <p style={{ fontSize: "12px" }}>
+            <Link to="/login">
+              <b
+                onClick={() => {
+                  getEmail();
+                  sendEmailHandler();
+                }}
+              >
+                FORGOT PASSWORD
+              </b>
+            </Link>
+          </p>
           <p style={{ fontSize: "12px" }}>
             DON'T HAVE AN ACCOUNT ?
             <b>

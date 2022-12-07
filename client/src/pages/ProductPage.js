@@ -4,16 +4,19 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../App";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductPage = () => {
-  const [setCart] = useContext(ThemeContext);
+  const { cart, setCart, totalCount, total, setTotal, setTotalCount } =
+    useContext(ThemeContext);
+  const navigate = useNavigate();
   const [product, setProduct] = useState({});
   const { id } = useParams();
+  const USER_KEY = "current user";
 
   useEffect(() => {
     axios
@@ -26,6 +29,48 @@ const ProductPage = () => {
         console.log(err);
       });
   }, []);
+
+  const cartHandler = () => {
+    if (!localStorage.getItem(USER_KEY)) {
+      navigate("/register");
+    } else {
+      let flag = true;
+      for (let i = 0; i < cart.length; i++) {
+        if (product.productname === cart[i].productname) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) {
+        setCart((prevState) => {
+          setTotalCount(totalCount + 1);
+          setTotal(total + parseInt(product.price));
+          return [...prevState, product];
+        });
+        toast.success("Food item added to cart", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } else {
+        toast.warning("Food item already exists in cart", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      }
+    }
+  };
 
   return (
     <Container>
@@ -44,26 +89,12 @@ const ProductPage = () => {
             natus veritatis atque reiciendis deleniti?
           </Desc>
           <Price>Rs.{product.price}</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Quantity(in ml or mg)</FilterTitle>
-              <FilterQuantity>
-                <FilterNum>250</FilterNum>
-                <FilterNum>500</FilterNum>
-                <FilterNum>1000</FilterNum>
-              </FilterQuantity>
-            </Filter>
-          </FilterContainer>
           <AddContainer>
-            <AmountContainer>
-              <RemoveIcon />
-              <Amount>1</Amount>
-              <AddIcon />
-            </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button onClick={cartHandler}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
+      <ToastContainer />
       <Newsletter />
       <Footer />
     </Container>
@@ -106,30 +137,6 @@ const Price = styled.span`
   font-size: 40px;
 `;
 
-const FilterContainer = styled.div`
-  width: 50%;
-  margin: 30px 0px;
-  display: flex;
-  justify-content: center;
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const FilterTitle = styled.span`
-  font-size: 20px;
-  font-weight: 400;
-`;
-
-const FilterQuantity = styled.select`
-  margin: 0 5px;
-  padding: 5px;
-`;
-
-const FilterNum = styled.option``;
-
 const AddContainer = styled.div`
   width: 50%;
   display: flex;
@@ -137,24 +144,8 @@ const AddContainer = styled.div`
   justify-content: space-between;
 `;
 
-const AmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-`;
-
-const Amount = styled.span`
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  border: 1px solid teal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 5px;
-`;
-
 const Button = styled.button`
+  margin-top: 20px;
   padding: 15px;
   border: 1px solid teal;
   background-color: white;

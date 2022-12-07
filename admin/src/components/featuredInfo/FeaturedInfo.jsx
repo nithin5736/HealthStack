@@ -6,6 +6,14 @@ import axios from "axios";
 export default function FeaturedInfo() {
   const [user, setUser] = useState([]);
   const [product, setProduct] = useState([]);
+  const [orders, setOrders] = useState([]);
+  const [total, setTotal] = useState(0);
+
+  const totalOrders = () => {
+    for (let i = 0; i < orders.length; i++) {
+      setTotal(total + parseInt(orders[i].amount));
+    }
+  };
 
   useEffect(() => {
     axios
@@ -16,11 +24,16 @@ export default function FeaturedInfo() {
       })
       .then((res) => {
         setProduct(res.data);
+        return axios.get("http://localhost:5000/orders");
+      })
+      .then((res) => {
+        setOrders(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+    totalOrders();
+  }, []);
 
   return (
     <div className="featured">
@@ -29,7 +42,7 @@ export default function FeaturedInfo() {
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">{user.length}</span>
           <span className="featuredMoneyRate">
-            +{user.length} <ArrowUpward className="featuredIcon positive" />
+            +{user.length*0.01}% <ArrowUpward className="featuredIcon positive" />
           </span>
         </div>
         <span className="featuredSub">Comparitvely</span>
@@ -37,9 +50,9 @@ export default function FeaturedInfo() {
       <div className="featuredItem">
         <span className="featuredTitle">Sales</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">₹24,415</span>
+          <span className="featuredMoney">₹{total}</span>
           <span className="featuredMoneyRate">
-            -1.4 <ArrowDownward className="featuredIcon negative" />
+          +{total*0.01}% <ArrowUpward className="featuredIcon" />
           </span>
         </div>
         <span className="featuredSub">Comparaively</span>
@@ -49,7 +62,7 @@ export default function FeaturedInfo() {
         <div className="featuredMoneyContainer">
           <span className="featuredMoney">{product.length}</span>
           <span className="featuredMoneyRate">
-          +{product.length} <ArrowUpward className="featuredIcon" />
+            +{product.length*0.01}% <ArrowUpward className="featuredIcon" />
           </span>
         </div>
         <span className="featuredSub">Comparatively</span>

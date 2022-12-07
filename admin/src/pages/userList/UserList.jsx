@@ -23,7 +23,14 @@ export default function UserList() {
   }, []);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    axios
+      .delete("http://localhost:5000/users/" + id)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   const columns = [
@@ -52,11 +59,6 @@ export default function UserList() {
       width: 140,
     },
     {
-      field: "transaction",
-      headerName: "Transaction Volume",
-      width: 160,
-    },
-    {
       field: "action",
       headerName: "Action",
       width: 150,
@@ -64,7 +66,7 @@ export default function UserList() {
         return (
           <>
             <Link to={"/user/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+              <button className="userListEdit">See Info</button>
             </Link>
             <DeleteOutline
               className="userListDelete"

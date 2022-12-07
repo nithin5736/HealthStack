@@ -13,10 +13,13 @@ const Register = () => {
     password: "",
     confirmPassword: "",
     usertype: "",
+    pincode: "",
+    phone: "",
+    address: "",
   });
 
   const validateForm = () => {
-    const { username, password, confirmPassword } = user;
+    const { username, password, confirmPassword, phone, pincode } = user;
     if (username.length < 5) {
       alert("Username should have atleast 5 characters");
       return false;
@@ -27,6 +30,14 @@ const Register = () => {
     }
     if (password !== confirmPassword) {
       alert("Password and Confirm Password should have same characters");
+      return false;
+    }
+    if (pincode.length !== 6) {
+      alert("Pincode should have atleast 6 characters");
+      return false;
+    }
+    if (phone.length !== 10) {
+      alert("Phone should have atleast 10 characters");
       return false;
     }
     return true;
@@ -49,6 +60,9 @@ const Register = () => {
           products: [],
           status: "active",
           transaction: 0,
+          pincode: user.pincode,
+          phone: user.phone,
+          address: user.address,
         });
       } else {
         await axios.post("http://localhost:5000/users", {
@@ -62,6 +76,9 @@ const Register = () => {
           cart: [],
           status: "active",
           transaction: 0,
+          pincode: user.pincode,
+          phone: user.phone,
+          address: user.address,
         });
       }
 
@@ -73,9 +90,11 @@ const Register = () => {
         password: "",
         confirmPassword: "",
         usertype: "",
+        pincode: "",
+        phone: "",
+        address: "",
       });
-
-      alert("Registered successfully");
+      alert('Registered Successfully');
       navigate("/login");
     }
   };
@@ -140,6 +159,36 @@ const Register = () => {
               }}
               required
             />
+            <Input
+              type="number"
+              placeholder="phone number"
+              value={user.phone}
+              onChange={(e) => {
+                setUser({ ...user, phone: e.target.value });
+              }}
+              minlength="10"
+              maxlength="10"
+              required
+            />
+            <Input
+              type="number"
+              placeholder="pincode"
+              value={user.pincode}
+              onChange={(e) => {
+                setUser({ ...user, pincode: e.target.value });
+              }}
+              minlength="6"
+              maxlength="6"
+              required
+            />
+            <TextArea
+              placeholder="Address"
+              value={user.address}
+              onChange={(e) => {
+                setUser({ ...user, address: e.target.value });
+              }}
+              required
+            ></TextArea>
             <Para>
               <b>ARE YOU A ?</b>
             </Para>
@@ -216,6 +265,7 @@ const Wrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
+  height: 70%;
 `;
 
 const Title = styled.h1`
@@ -226,6 +276,13 @@ const Title = styled.h1`
 const Input = styled.input`
   flex: 1;
   min-width: 40%;
+  border-radius: 10px;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+`;
+
+const TextArea = styled.textarea`
+  min-width: 100%;
   border-radius: 10px;
   margin: 20px 10px 0px 0px;
   padding: 10px;

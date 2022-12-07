@@ -12,7 +12,7 @@ const AddProduct = () => {
     productname: "",
     img: "",
     price: "",
-    quantity: "",
+    type: "",
   });
   const navigate = useNavigate();
 
@@ -23,11 +23,11 @@ const AddProduct = () => {
         productname: addProduct.productname,
         img: addProduct.img,
         price: addProduct.price,
-        quantity: addProduct.quantity,
+        status: "active",
+        type: addProduct.type,
       })
       .then(() => {
         alert("Your Product has been added successfully");
-        navigate("/products");
       })
       .catch(() => {
         alert("Please enter valid Product details");
@@ -36,7 +36,7 @@ const AddProduct = () => {
       productname: "",
       img: "",
       price: "",
-      quantity: "",
+      type: "",
     });
   };
 
@@ -103,23 +103,76 @@ const AddProduct = () => {
                 We'll never share this information with anyone else.
               </small>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Stock Quantity</label>
+            <fieldset class="row mb-3">
+              <legend class="col-form-label col-sm-2 pt-0">Product</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="type"
+                    id="gridRadios1"
+                    value="medicine"
+                    onChange={(e) => {
+                      setAddProduct({ ...addProduct, type: e.target.value });
+                    }}
+                    required
+                  />
+                  <label class="form-check-label" for="gridRadios1">
+                    Medicine
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="type"
+                    id="gridRadios2"
+                    value="healthcare"
+                    onChange={(e) => {
+                      setAddProduct({ ...addProduct, type: e.target.value });
+                    }}
+                    required
+                  />
+                  <label class="form-check-label" for="gridRadios2">
+                    Healthcare
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="type"
+                    id="gridRadios3"
+                    value="pharmaceutical"
+                    onChange={(e) => {
+                      setAddProduct({ ...addProduct, type: e.target.value });
+                    }}
+                    required
+                  />
+                  <label class="form-check-label" for="gridRadios3">
+                    Pharmaceutical
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            {/* <div class="form-group">
+              <label for="exampleInputPassword1">Category</label>
               <input
                 type="number"
                 class="form-control"
                 id="exampleInputPassword1"
-                placeholder="Enter Stock Quantity"
-                value={addProduct.quantity}
+                placeholder="Enter Category"
+                value={addProduct.category}
                 onChange={(e) => {
-                  setAddProduct({ ...addProduct, quantity: e.target.value });
+                  setAddProduct({ ...addProduct, category: e.target.value });
                 }}
                 required
               />
               <small id="emailHelp" class="form-text text-muted">
                 We'll never share this information with anyone else.
               </small>
-            </div>
+            </div> */}
             <button type="submit" class="btn btn-primary">
               ADD PRODUCT
             </button>

@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Badge } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
@@ -16,17 +15,17 @@ import {
 const Navbar = () => {
   const USER_KEY = "current user";
   const [user] = useState(JSON.parse(localStorage.getItem(USER_KEY)));
-  const [cart] = useContext(ThemeContext);
+  const { cart, totalCount } = useContext(ThemeContext);
 
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          <SearchConatiner>
+          {/* <b>Take it easy</b> */}
+          {/* <SearchConatiner>
             <Input placeholder="Search" />
             <SearchIcon style={{ color: "gray", fontSize: 20 }} />
-          </SearchConatiner>
+          </SearchConatiner> */}
         </Left>
         <Center>
           <Logo>
@@ -46,17 +45,34 @@ const Navbar = () => {
           </Logo>
         </Center>
         <Right>
-          <Item>
-            <Link
-              to="/products"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-            >
-              PRODUCTS
-            </Link>
-          </Item>
+          <CDropdown
+            variant="nav-item"
+            popper={false}
+            style={{ listStyle: "none", marginLeft: "5px" }}
+          >
+            <CDropdownToggle>
+              <span style={{ color: "black" }}>Products</span>
+            </CDropdownToggle>
+            <CDropdownMenu>
+              <Link to="/medicines">
+                <CDropdownItem>
+                  <span style={{ color: "black" }}>Medicines</span>
+                </CDropdownItem>
+              </Link>
+              <Link to="/healthcare">
+                <CDropdownItem>
+                  <span style={{ color: "black" }}>Healthcare products</span>
+                </CDropdownItem>
+              </Link>
+              <Link to="/pharmaceutical">
+                <CDropdownItem>
+                  <span style={{ color: "black" }}>
+                    Pharmaceutical products
+                  </span>
+                </CDropdownItem>
+              </Link>
+            </CDropdownMenu>
+          </CDropdown>
           <Item>
             <Link
               to="/faqs"
@@ -78,7 +94,7 @@ const Navbar = () => {
                 marginTop: "15px",
               }}
             >
-              CONTACT US
+              CONTACT
             </Link>
           </Item>
           {!user && (
@@ -97,14 +113,20 @@ const Navbar = () => {
               popper={false}
               style={{ listStyle: "none", marginLeft: "5px" }}
             >
-              <CDropdownToggle>{user.username}</CDropdownToggle>
+              <CDropdownToggle>
+                <span style={{ color: "black" }}>Hi, {user.username}</span>
+              </CDropdownToggle>
               <CDropdownMenu>
                 <Link to="/profile">
-                  <CDropdownItem>MY PROFILE</CDropdownItem>
+                  <CDropdownItem>
+                    <span style={{ color: "black" }}>MY PROFILE</span>
+                  </CDropdownItem>
                 </Link>
                 {user && user.usertype === "Seller" && (
                   <Link to="/addproduct">
-                    <CDropdownItem>ADD PRODUCT</CDropdownItem>
+                    <CDropdownItem>
+                      <span style={{ color: "black" }}>ADD PRODUCT</span>
+                    </CDropdownItem>
                   </Link>
                 )}
                 <Link
@@ -113,13 +135,15 @@ const Navbar = () => {
                     localStorage.clear();
                   }}
                 >
-                  <CDropdownItem>LOG OUT</CDropdownItem>
+                  <CDropdownItem>
+                    <span style={{ color: "black" }}>LOG OUT</span>
+                  </CDropdownItem>
                 </Link>
               </CDropdownMenu>
             </CDropdown>
           )}
           <Item>
-            <Badge badgeContent={cart.length} color="secondary">
+            <Badge badgeContent={totalCount} color="secondary">
               <Link
                 to="/cart"
                 style={{
@@ -139,7 +163,7 @@ const Navbar = () => {
 
 const Container = styled.div`
   height: 60px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   ${mobile({ height: "50px" })}
 `;
 

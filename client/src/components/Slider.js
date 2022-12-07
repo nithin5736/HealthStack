@@ -33,7 +33,7 @@ const Slider = () => {
                 <Desc>{item.desc}</Desc>
                 <Button>
                   <Link
-                    to="/products"
+                    to="/medicines"
                     style={{ textDecoration: "none", color: "black" }}
                   >
                     ORDER NOW

@@ -27,16 +27,19 @@ export const categories = [
     id: 1,
     img: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGhhcm1hY2V1dGljYWx8ZW58MHx8MHx8&w=1000&q=80",
     title: "MEDICINES",
+    type: "medicines",
   },
   {
     id: 2,
-    img: "https://sunwinhealthcare.com/wp-content/uploads/2021/01/SkincareProducts-768x512.png",
+    img: "https://vivecosmetic.com/wp-content/uploads/2021/04/Personal-Care-Products-Manufacturers.jpg",
     title: "HEALTHCARE PRODUCTS",
+    type: "healthcare",
   },
   {
     id: 3,
     img: "https://media.istockphoto.com/photos/bottling-vaccine-vials-in-a-pharmaceutical-factory-picture-id1351826681?b=1&k=20&m=1351826681&s=170667a&w=0&h=ORtvsAoFZmLEVx4svap2VbxVNoVzRgTuBelCeDMWb5Q=",
     title: "PHARMACEUTICAL PRODUCTS",
+    type: "pharmaceutical",
   },
 ];
 

@@ -5,15 +5,55 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { ThemeContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Product = ({ item }) => {
   const navigate = useNavigate();
-  const [cart, setCart] = useContext(ThemeContext);
+  const { cart, setCart, totalCount, setTotalCount, total, setTotal } =
+    useContext(ThemeContext);
+  const USER_KEY = "current user";
 
   const cartHandler = () => {
-    setCart((prevState) => {
-      return [...prevState, item];
-    });
+    if (!localStorage.getItem(USER_KEY)) {
+      navigate("/register");
+    } else {
+      let flag = true;
+      for (let i = 0; i < cart.length; i++) {
+        if (item.productname === cart[i].productname) {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) {
+        setCart((prevState) => {
+          setTotalCount(totalCount + 1);
+          setTotal(total + parseInt(item.price));
+          return [...prevState, item];
+        });
+        toast.success("Food item added to cart", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } else {
+        toast.warning("Food item already exists in cart", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      }
+    }
   };
 
   const searchHandler = () => {
@@ -36,6 +76,7 @@ const Product = ({ item }) => {
             <FavoriteBorderOutlinedIcon />
           </Icon>
         </Info>
+        <ToastContainer />
       </Container>
     </>
   );

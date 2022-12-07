@@ -6,127 +6,21 @@
   ],
   "users": [
     {
-      "firstname": "Prabhash",
-      "lastname": "Varma",
-      "username": "Prabha",
-      "email": "prabha@gmail.com",
-      "password": "prabha12345",
-      "confirmPassword": "prabha12345",
-      "usertype": "Consumer",
+      "firstname": "Sai",
+      "lastname": "Nithin",
+      "username": "nithin5736",
+      "email": "gubbasainithin@gmail.com",
+      "password": "group18",
+      "confirmPassword": "group18",
+      "usertype": "Seller",
       "cart": [],
+      "products": [],
       "status": "active",
-      "transaction": "0",
+      "transaction": 0,
+      "pincode": "500074",
+      "phone": "8317648645",
+      "address": "H.No:3-1-637, Road. No: 3, Kakatiyacolony, LBNagar",
       "id": 1
-    },
-    {
-      "firstname": "Sri",
-      "lastname": "ram",
-      "username": "Sri ram",
-      "email": "sriram@gmail.com",
-      "password": "sriram12345",
-      "confirmPassword": "sriram12345",
-      "usertype": "Seller",
-      "cart": [],
-      "products": [],
-      "status": "active",
-      "transaction": "0",
-      "id": 2
-    },
-    {
-      "firstname": "Mohan",
-      "lastname": "Sai Krishna",
-      "username": "Mohan",
-      "email": "mohan@gmail.com",
-      "password": "mohan12345",
-      "confirmPassword": "mohan12345",
-      "usertype": "Seller",
-      "products": [],
-      "cart": [],
-      "status": "active",
-      "transaction": "0",
-      "id": 3
-    },
-    {
-      "firstname": "Bargav",
-      "lastname": "Koduri",
-      "username": "Tejaswi",
-      "email": "bargav@gmail.com",
-      "password": "bargav12345",
-      "confirmPassword": "bargav12345",
-      "usertype": "Seller",
-      "products": [],
-      "cart": [],
-      "status": "active",
-      "transaction": "0",
-      "id": 4
-    },
-    {
-      "firstname": "Lalith",
-      "lastname": "Kumar",
-      "username": "Lalith",
-      "email": "lalith@gmail.com",
-      "password": "lalith12345",
-      "confirmPassword": "lalith12345",
-      "usertype": "Seller",
-      "cart": [],
-      "products": [],
-      "status": "active",
-      "transaction": "0",
-      "id": 5
-    },
-    {
-      "firstname": "Bargav",
-      "lastname": "Reddy",
-      "username": "Bargav",
-      "email": "bargav@gmail.com",
-      "password": "bargav12345",
-      "confirmPassword": "bargav12345",
-      "usertype": "Seller",
-      "cart": [],
-      "products": [],
-      "status": "active",
-      "transaction": 0,
-      "id": 6
-    },
-    {
-      "firstname": "surya",
-      "lastname": "mopidevi",
-      "username": "arya",
-      "email": "pavitrasurya@gmail.com",
-      "password": "hEALTHsTACK@003",
-      "confirmPassword": "hEALTHsTACK@003",
-      "usertype": "Consumer",
-      "cart": [],
-      "status": "active",
-      "transaction": 0,
-      "id": 7
-    },
-    {
-      "firstname": "Ashrith",
-      "lastname": "Royal",
-      "username": "Royal",
-      "email": "royal@gmail.com",
-      "password": "royal12345",
-      "confirmPassword": "royal12345",
-      "usertype": "Consumer",
-      "cart": [],
-      "status": "active",
-      "transaction": 0,
-      "id": 8
-    },
-    {
-      "firstname": "Rohith",
-      "lastname": "Boppey",
-      "username": "Rohith",
-      "email": "rohith@gmail.com",
-      "password": "rohith12345",
-      "confirmPassword": "rohith12345",
-      "usertype": "Seller",
-      "cart": [],
-      "products": [],
-      "status": "active",
-      "transaction": 0,
-      "id": 9
     }
   ],
   "products": [
@@ -136,7 +30,7 @@
       "productname": "Dettol",
       "price": "120",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 2,
@@ -144,7 +38,7 @@
       "productname": "Strepsils",
       "price": "100",
       "status": "active",
-      "quantity": "1"
+      "type": "medicine"
     },
     {
       "id": 3,
@@ -152,7 +46,7 @@
       "productname": "Ensure",
       "price": "160",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 4,
@@ -160,7 +54,7 @@
       "productname": "Inlife Diabetes Care",
       "price": "129",
       "status": "active",
-      "quantity": "1"
+      "type": "medicine"
     },
     {
       "id": 5,
@@ -168,7 +62,7 @@
       "productname": "Pampers",
       "price": "200",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 6,
@@ -176,7 +70,7 @@
       "productname": "ProteinX",
       "price": "530",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 7,
@@ -184,7 +78,7 @@
       "productname": "Horlicks",
       "price": "250",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 8,
@@ -192,7 +86,7 @@
       "productname": "Vicks",
       "price": "40",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
       "id": 9,
@@ -200,7 +94,7 @@
       "productname": "Syringe Needle",
       "price": "120",
       "status": "active",
-      "quantity": "1"
+      "type": "pharmaceutical"
     },
     {
       "id": 10,
@@ -208,40 +102,331 @@
       "productname": "Savlon",
       "price": "70",
       "status": "active",
-      "quantity": "1"
+      "type": "healthcare"
     },
     {
-      "productname": "Cornflakes",
-      "img": "https://www.bigbasket.com/media/uploads/p/xxl/251018_6-kelloggs-corn-flakes.jpg",
-      "price": "460",
-      "quantity": "2",
+      "id": 11,
+      "img": "https://s.abcnews.com/images/US/pill-bottle-recall-walgreens-01-ht-llr-220616_1655405161537_hpEmbed_1x1_992.jpg",
+      "productname": "Pain Reliver",
+      "price": "110",
       "status": "active",
-      "id": 11
+      "type": "medicine"
     },
     {
-      "productname": "Museli",
-      "img": "https://m.media-amazon.com/images/I/91WcSFzcmwL._SL1500_.jpg",
-      "price": "512",
-      "quantity": "3",
-      "status": "active",
-      "id": 12
-    },
-    {
-      "productname": "Thermometer Dr Trust",
-      "img": "https://m.media-amazon.com/images/I/61eT2Cpr6lL.jpg",
-      "price": "350",
-      "quantity": "2",
-      "status": "active",
-      "id": 13
-    },
-    {
+      "id": 12,
+      "img": "https://www.practostatic.com/practopedia-images/v3/res-750/dolo-650mg-tablet-cold-cough-covid-essentials-15-s_6fbd3435-bffd-428d-9288-ec74ad6a94ef.JPG",
       "productname": "Paracetamol",
-      "img": "https://5.imimg.com/data5/SELLER/Default/2022/9/IV/UY/CG/75459511/500mg-paracetamol-tablet-500x500.jpg",
-      "price": "100",
-      "quantity": "5",
+      "price": "170",
       "status": "active",
-      "id": 14
+      "type": "medicine"
+    },
+    {
+      "id": 13,
+      "img": "https://theindianpharma.com/wp-content/uploads/2021/06/velpanat.jpg",
+      "productname": "Sofosbuvir Velpatasvir",
+      "price": "170",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 14,
+      "img": "https://images-platform.99static.com/vyN3ZSXsMjXxz1SGaL4RIIWSZlk=/0x0:1200x1200/500x500/top/smart/99designs-contests-attachments/66/66054/attachment_66054141",
+      "productname": "Nerve Aid",
+      "price": "120",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 15,
+      "img": "https://cdn01.pharmeasy.in/dam/products/N82100/new-coldact-capsule-20s-3-1641302079.jpg",
+      "productname": "Cold Act",
+      "price": "170",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 16,
+      "img": "https://www.cfspharmacy.pharmacy/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/1/_/1_2_29.jpg",
+      "productname": "Penicillamine",
+      "price": "200",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 17,
+      "img": "https://newassets.apollo247.com/pub/media/catalog/product/e/l/eld0003.jpg",
+      "productname": "Eldofer",
+      "price": "80",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 18,
+      "img": "https://5.imimg.com/data5/SELLER/Default/2020/10/QM/OM/KV/2581214/erlonat-500x500.jpg",
+      "productname": "Levothyroxine",
+      "price": "220",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 19,
+      "img": "https://static.oxinis.com/healthmug/image/product/84206-1-1000.webp",
+      "productname": "Chest and Cold",
+      "price": "90",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 20,
+      "img": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/ht95hiulzdda6fzf6hrq.jpg",
+      "productname": "Zinetac",
+      "price": "112",
+      "status": "active",
+      "type": "medicine"
+    },
+    {
+      "id": 21,
+      "img": "https://m.media-amazon.com/images/I/81Y5j4vRcsL._SL1500_.jpg",
+      "productname": "Cerelac",
+      "price": "240",
+      "status": "active",
+      "type": "healthcare"
+    },
+    {
+      "id": 22,
+      "img": "http://ecx.images-amazon.com/images/I/912oiEsylLL._SL1500_.jpg",
+      "productname": "Glucose D",
+      "price": "160",
+      "status": "active",
+      "type": "healthcare"
+    },
+    {
+      "id": 23,
+      "img": "https://m.media-amazon.com/images/I/51ffcjn8NlL._SL1200_.jpg",
+      "productname": "Johnson Baby Lotion",
+      "price": "140",
+      "status": "active",
+      "type": "healthcare"
+    },
+    {
+      "id": 24,
+      "img": "https://m.media-amazon.com/images/I/71dUpAF5KGL._SL1500_.jpg",
+      "productname": "Bornvita",
+      "price": "170",
+      "status": "active",
+      "type": "healthcare"
+    },
+    {
+      "id": 25,
+      "img": "https://m.media-amazon.com/images/I/615Cha0wdjS._SX522_.jpg",
+      "productname": "Kelloygs Museli",
+      "price": "540",
+      "status": "active",
+      "type": "healthcare"
+    },
+    {
+      "id": 26,
+      "img": "https://3.imimg.com/data3/JY/OA/GLADMIN-17712/multichannel-pipette-500x500.jpg",
+      "productname": "Multi channel pipette",
+      "price": "1000",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 27,
+      "img": "https://5.imimg.com/data5/DM/KB/MY-702469/medical-microscope-500x500.jpg",
+      "productname": "Microscope",
+      "price": "10000",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 28,
+      "img": "https://5.imimg.com/data5/SELLER/Default/2022/6/NM/KM/UK/8665347/ozocheck-st-deluxe-stethoscope-1000x1000.jpg",
+      "productname": "Stethoscope",
+      "price": "2000",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 29,
+      "img": "https://www.netmeds.com/images/product-v1/600x600/408242/omron_blood_pressure_monitor_upper_arm_type_hem_7121_in_0.jpg",
+      "productname": "Omron Blood Pressure Monitor",
+      "price": "1120",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 30,
+      "img": "https://rukminim1.flixcart.com/image/416/416/kbdz5ow0/pulse-oximeter/7/g/g/omron-cms50n-original-imafsqc2xeywqy8a.jpeg?q=70",
+      "productname": "Oximeter",
+      "price": "1220",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 31,
+      "img": "https://cdn.shopify.com/s/files/1/0096/7524/3567/products/IMG_5201_300x300.jpg?v=1605596399",
+      "productname": "IR Thermometer",
+      "price": "820",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 32,
+      "img": "https://5.imimg.com/data5/BG/DV/FH/SELLER-4264045/clinical-digital-thermometer-500x500.jpg",
+      "productname": "Thermometer",
+      "price": "920",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 33,
+      "img": "https://m.media-amazon.com/images/I/419KhZVwwTL._SX342_.jpg",
+      "productname": "Dental Kit",
+      "price": "4520",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 34,
+      "img": "https://m.media-amazon.com/images/I/61eLIU7BLtL._SL1500_.jpg",
+      "productname": "Omron Ultra compact nebulizer",
+      "price": "2220",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 35,
+      "img": "https://rukminim1.flixcart.com/image/416/416/l3nco7k0/torch/m/t/2/5-ocpd11-led-o-shape-vein-finder-pediatric-otica-original-imageqya8hrgvtyq.jpeg?q=70",
+      "productname": "Optica pediatric vein finder",
+      "price": "1320",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "id": 36,
+      "img": "https://m.media-amazon.com/images/I/61ATauYgGWS._SL1500_.jpg",
+      "productname": "Oxygen Concentrator",
+      "price": "1420",
+      "status": "active",
+      "type": "pharmaceutical"
+    },
+    {
+      "productname": "Aceron TC",
+      "price": "220",
+      "img": "https://www.buy-pharma.md/img/uploads/35930-Aceron-TC-%E9%86%8B%E6%B0%AF%E8%8A%AC%E9%85%B8-%E6%89%91%E7%83%AD%E6%81%AF%E7%97%9B-%E5%92%8C-%E8%83%B0%E8%9B%8B%E7%99%BD%E9%85%B6%E8%83%B0%E5%87%9D%E4%B9%B3%E8%9B%8B%E7%99%BD%E9%85%B6.jpg",
+      "type": "",
+      "status": "active",
+      "id": 37
+    },
+    {
+      "productname": "Aceron TC",
+      "price": "220",
+      "img": "https://www.buy-pharma.md/img/uploads/35930-Aceron-TC-%E9%86%8B%E6%B0%AF%E8%8A%AC%E9%85%B8-%E6%89%91%E7%83%AD%E6%81%AF%E7%97%9B-%E5%92%8C-%E8%83%B0%E8%9B%8B%E7%99%BD%E9%85%B6%E8%83%B0%E5%87%9D%E4%B9%B3%E8%9B%8B%E7%99%BD%E9%85%B6.jpg",
+      "type": "medicine",
+      "status": "active",
+      "id": 38
+    },
+    {
+      "productname": "Citrizine",
+      "price": "180",
+      "img": "https://5.imimg.com/data5/QZ/AI/PC/SELLER-83566939/cetirizine-hydrochloride-tablet-ip-500x500.jpg",
+      "type": "medicine",
+      "status": "active",
+      "id": 39
+    },
+    {
+      "productname": "Coughrex",
+      "price": "250",
+      "img": "https://5.imimg.com/data5/OV/NQ/MY-40137926/coughrex-500x500.jpg",
+      "type": "medicine",
+      "status": "active",
+      "id": 40
+    },
+    {
+      "productname": "Natural Body Lotion",
+      "price": "480",
+      "img": "https://cdn.shopify.com/s/files/1/0064/8907/9893/products/naturalbodylotionnew-01.jpg?v=1638524765",
+      "type": "healthcare",
+      "status": "active",
+      "id": 41
+    },
+    {
+      "productname": "Ginsen",
+      "price": "350",
+      "img": "https://www.ginsen-london.com/wp-content/uploads/2021/01/Menstrual-Maintenance-30-Caps-768x768.jpg",
+      "type": "healthcare",
+      "status": "active",
+      "id": 42
+    },
+    {
+      "productname": "Vicks Inhaler",
+      "price": "50",
+      "img": "https://www.bigbasket.com/media/uploads/p/xxl/40019207_6-vicks-inhaler-provides-instant-relief-from-blocked-nose.jpg",
+      "type": "healthcare",
+      "status": "active",
+      "id": 43
+    },
+    {
+      "productname": "Test tube",
+      "price": "400",
+      "img": "https://5.imimg.com/data5/AU/DY/MY-957949/laboratory-glass-test-tubes-500x500.jpg",
+      "type": "pharmaceutical",
+      "status": "active",
+      "id": 44
+    },
+    {
+      "productname": "Burette",
+      "price": "720",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFY87eHHb3H7yK47FjWp1gMmHtBbeukjbRogM7kxth55op67R2ekjlV6c2bQJ6by5W5jw&usqp=CAU",
+      "type": "pharmaceutical",
+      "status": "active",
+      "id": 45
+    },
+    {
+      "productname": "Lab Glasses",
+      "price": "500",
+      "img": "https://m.media-amazon.com/images/I/51mKdzw4JsL._SY355_.jpg",
+      "type": "pharmaceutical",
+      "status": "active",
+      "id": 46
+    },
+    {
+      "productname": "Moov",
+      "img": "https://m.media-amazon.com/images/I/51sil4A27uL._SY450_.jpg",
+      "price": "100",
+      "status": "active",
+      "type": "healthcare",
+      "id": 47
     }
   ],
-  "queries": []
+  "queries": [
+    {
+      "name": "charandas1234",
+      "email": "charan@gmail.com",
+      "ques": "query",
+      "sug": "suggestion",
+      "id": 1
+    },
+    {
+      "name": "Lalith",
+      "email": "lalith@gmail.com",
+      "ques": "Regarding AddProduct",
+      "sug": "NA",
+      "id": 3
+    }
+  ],
+  "orders": [
+    {
+      "accountholder": "Sai Nithin",
+      "phone": "8317648645",
+      "accountnumber": "456781234562",
+      "ifsc": "iob12345",
+      "amount": 340,
+      "pincode": "500074",
+      "address": "H.No:3-1-637, Road. No: 3, Kakatiyacolony, LBNagar",
+      "id": 1
+    }
+  ]
 }

@@ -7,7 +7,9 @@ import WidgetLg from "../../components/widgetLg/WidgetLg";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 
+
 export default function Home() {
+
   return (
     <>
       <Topbar />
@@ -15,7 +17,7 @@ export default function Home() {
         <Sidebar />
         <div className="home">
           <FeaturedInfo />
-          <Chart data={userData} title="User Analytics" />
+          {/* <Chart data={userData} title="User Analytics" /> */}
           <div className="homeWidgets">
             <WidgetSm />
             <WidgetLg />

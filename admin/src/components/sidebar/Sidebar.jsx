@@ -15,6 +15,7 @@ import PaidOutlinedIcon from "@mui/icons-material/PaidOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
+import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 
 export default function Sidebar() {
   return (
@@ -50,24 +51,22 @@ export default function Sidebar() {
                 Products
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <PaidOutlinedIcon />
-              Transactions
-            </li>
-            {/* <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li> */}
+            <Link to="/transactions" className="link">
+              <li className="sidebarListItem">
+                <PaidOutlinedIcon />
+                Transactions
+              </li>
+            </Link>
+            <Link to="/queries" className="link">
+              <li className="sidebarListItem">
+                <QuestionAnswerOutlinedIcon />
+                Queries
+              </li>
+            </Link>
             <Link to="/newProduct" className="link">
               <li className="sidebarListItem">
                 <LocalHospitalOutlinedIcon />
                 Add Product
-              </li>
-            </Link>
-            <Link to="/newUser" className="link">
-              <li className="sidebarListItem">
-                <PersonAddAltOutlinedIcon />
-                Add User
               </li>
             </Link>
             <Link to="/" className="link">
@@ -76,46 +75,11 @@ export default function Sidebar() {
                 onClick={() => localStorage.clear()}
               >
                 <LogoutIcon />
-                {/* <Storefront className="sidebarIcon" /> */}
                 Log out
               </li>
             </Link>
           </ul>
         </div>
-        {/* <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
-          </ul>
-        </div> */}
-        {/* <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <WorkOutline className="sidebarIcon" />
-              Manage
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
-            </li>
-          </ul>
-        </div> */}
       </div>
     </div>
   );

@@ -5,11 +5,13 @@ import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
-import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Adminlogin from "./pages/Adminlogin/Adminlogin";
+import Error from "./pages/Error";
+import Transaction from "./pages/Transactions/Transaction";
+import Queries from "./pages/Queries/Queries";
 
 function App() {
   return (
@@ -24,14 +26,17 @@ function App() {
         <Route exact path="/home">
           <Home />
         </Route>
+        <Route path="/transactions">
+          <Transaction />
+        </Route>
+        <Route path="/queries">
+          <Queries />
+        </Route>
         <Route path="/users">
           <UserList />
         </Route>
         <Route path="/user/:userId">
           <User />
-        </Route>
-        <Route path="/newUser">
-          <NewUser />
         </Route>
         <Route path="/products">
           <ProductList />
@@ -41,6 +46,9 @@ function App() {
         </Route>
         <Route path="/newproduct">
           <NewProduct />
+        </Route>
+        <Route path="/error">
+          <Error />
         </Route>
       </Switch>
       {/* </div> */}

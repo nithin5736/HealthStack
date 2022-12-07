@@ -3,19 +3,7 @@ import styled from "styled-components";
 import Product from "./Product";
 import axios from "axios";
 
-const Products = () => {
-  const [popularProducts, setPopularProducts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/products")
-      .then((res) => {
-        setPopularProducts(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+const Medicines = ({popularProducts}) => {
 
 
   return (
@@ -39,4 +27,4 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-export default Products;
+export default Medicines;

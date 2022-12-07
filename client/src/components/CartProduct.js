@@ -1,47 +1,66 @@
-import React,{useState} from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../App";
 import styled from "styled-components";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 
 const CartProduct = ({ c }) => {
   const [count, setCount] = useState(1);
+  const { total, setTotal, totalCount, setTotalCount } =
+    useContext(ThemeContext);
 
   return (
     <>
-      <Product>
-        <ProductDetail>
-          <Image src={c.img} />
-          <Details>
-            <ProductName>
-              <b>Product: </b> {c.productname}
-            </ProductName>
-            <ProductId>
-              <b>ID: {c.id}</b>
-            </ProductId>
-          </Details>
-        </ProductDetail>
-        <PriceDetail>
-          <ProductAmountContainer>
-            <AddIcon
-              onClick={() => {
-                if (count < 20) {
-                  setCount(count + 1);
-                }
-              }}
-            />
-            <ProductAmount>{count}</ProductAmount>
-            <RemoveIcon
-              onClick={() => {
-                if (count > 1) {
-                  setCount(count - 1);
-                }
-              }}
-            />
-          </ProductAmountContainer>
-          <ProductPrice>Rs. {c.price}</ProductPrice>
-        </PriceDetail>
-      </Product>
-      <Hr />
+      {c.price && (
+        <>
+          <Product>
+            <ProductDetail>
+              <Image src={c.img} />
+              <Details>
+                <ProductName>
+                  <b>Product: </b> {c.productname}
+                </ProductName>
+                <ProductId>
+                  <b>ID: {c.id}</b>
+                </ProductId>
+              </Details>
+            </ProductDetail>
+            <PriceDetail>
+              <ProductAmountContainer>
+                <AddIcon
+                  onClick={() => {
+                    if (count < 20) {
+                      setCount(count + 1);
+                      setTotalCount(totalCount + 1);
+                      setTotal(total + parseInt(c.price));
+                    }
+                  }}
+                />
+                <ProductAmount>{count}</ProductAmount>
+                <RemoveIcon
+                  onClick={() => {
+                    if (count > 1) {
+                      setCount(count - 1);
+                      setTotalCount(totalCount - 1);
+                      setTotal(total - parseInt(c.price));
+                    } else {
+                      setCount(0);
+                      setTotalCount(totalCount - 1);
+                      setTotal(total - parseInt(c.price));
+                      delete c.productname;
+                      delete c.price;
+                      delete c.id;
+                      delete c.img;
+                    }
+                  }}
+                />
+              </ProductAmountContainer>
+              <ProductPrice>Rs. {c.price * count}</ProductPrice>
+            </PriceDetail>
+          </Product>
+          <Hr />
+        </>
+      )}
     </>
   );
 };

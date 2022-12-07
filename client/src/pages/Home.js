@@ -3,23 +3,16 @@ import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
-import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import HomeMedicines from "../components/HomeMedicines";
+import HomePharmaceutical from "../components/HomePharmaceutical";
+import HomeHealthcare from "../components/HomeHealthcare";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const divHandler = () => {
-    setTimeout(() => {
-      navigate("/login");
-    }, 2000);
-  };
-
   return (
-    <div onMouseOver={divHandler}>
+    <div>
       <Announcement />
       <Navbar />
       <Slider />
@@ -28,9 +21,17 @@ const Home = () => {
       </Center>
       <Categories />
       <Center>
-        <Logo>OUR PRODUCTS</Logo>
+        <Logo>MEDICINES</Logo>
       </Center>
-      <Products />
+      <HomeMedicines />
+      <Center>
+        <Logo>HEALTHCARE PRODUCTS</Logo>
+      </Center>
+      <HomeHealthcare />
+      <Center>
+        <Logo>PHARMACEUTICAL PRODUCTS</Logo>
+      </Center>
+      <HomePharmaceutical />
       <Newsletter />
       <Footer />
     </div>

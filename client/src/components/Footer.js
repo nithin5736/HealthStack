@@ -119,7 +119,7 @@ const Footer = () => {
           </ListItem>
           <ListItem>
             <Link
-              to="/products"
+              to="/medicines"
               style={{ textDecoration: "none", color: "black" }}
             >
               Medicines
@@ -127,7 +127,7 @@ const Footer = () => {
           </ListItem>
           <ListItem>
             <Link
-              to="/products"
+              to="/healthcare"
               style={{ textDecoration: "none", color: "black" }}
             >
               Healthcare Products
@@ -135,7 +135,7 @@ const Footer = () => {
           </ListItem>
           <ListItem>
             <Link
-              to="/products"
+              to="/pharmaceutical"
               style={{ textDecoration: "none", color: "black" }}
             >
               Pharmaceutical Products

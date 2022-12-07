@@ -1,4 +1,3 @@
-import "./productList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { productRows } from "../../dummyData";
@@ -8,12 +7,12 @@ import axios from "axios";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 
-export default function ProductList() {
+export default function Queries() {
   const [data, setData] = useState(productRows);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/products")
+      .get("http://localhost:5000/queries")
       .then((res) => {
         setData(res.data);
       })
@@ -22,44 +21,20 @@ export default function ProductList() {
       });
   }, []);
 
-  const handleDelete = (id) => {
-    axios
-      .delete("http://localhost:5000/products/" + id)
-      .then((res) => {
-        console.log(res);
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
-      field: "product",
-      headerName: "Product",
+      field: "name",
+      headerName: "Name",
       width: 200,
       renderCell: (params) => {
-        return (
-          <div className="productListItem">
-            <img className="productListImg" src={params.row.img} alt="" />
-            {params.row.productname}
-          </div>
-        );
+        return <div className="productListItem">{params.row.name}</div>;
       },
     },
-    { field: "type", headerName: "Product Type", width: 200 },
-    {
-      field: "status",
-      headerName: "Status",
-      width: 120,
-    },
-    {
-      field: "price",
-      headerName: "Price(in Rs.)",
-      width: 160,
-    },
+    { field: "email", headerName: "Email", width: 200 },
+    { field: "ques", headerName: "Query", width: 200 },
+    { field: "sug", headerName: "Suggestion", width: 150 },
+
     {
       field: "action",
       headerName: "Action",
@@ -67,13 +42,9 @@ export default function ProductList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/product/" + params.row.id}>
-              <button className="productListEdit">See Info</button>
-            </Link>
-            <DeleteOutline
-              className="productListDelete"
-              onClick={() => handleDelete(params.row.id)}
-            />
+            <a href={`mailto:${params.row.email}`}>
+              <button className="userListEdit">Reply</button>
+            </a>
           </>
         );
       },
@@ -86,7 +57,7 @@ export default function ProductList() {
       <div className="container">
         <Sidebar />
         <div className="productList">
-          <h1 style={{ color: "darkblue" }}>All Products</h1>
+          <h1 style={{ color: "darkblue" }}>All Queries</h1>
           <DataGrid
             rows={data}
             disableSelectionOnClick

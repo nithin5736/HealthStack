@@ -5,17 +5,23 @@ import Footer from "../components/Footer";
 import Announcement from "../components/Announcement";
 import contact from "../images/contactus.gif";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const ContactUs = () => {
+  const navigate = useNavigate();
   const [query, setQuery] = useState({
     name: "",
     email: "",
     ques: "",
     sug: "",
   });
+  const USER_KEY = "current user";
 
   const sendQueryHandler = (e) => {
     e.preventDefault();
+    if (localStorage.getItem(USER_KEY) === null) {
+      navigate("/login");
+    }
     axios
       .post("http://localhost:5000/queries", {
         name: query.name,

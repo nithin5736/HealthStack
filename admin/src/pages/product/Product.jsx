@@ -30,7 +30,9 @@ export default function Product() {
         <Sidebar />
         <div className="product">
           <div className="productTitleContainer">
-            <h1 className="productTitle">Product</h1>
+            <h1 className="productTitle" style={{ color: "darkblue" }}>
+              Product
+            </h1>
           </div>
           <div className="productTop">
             <div className="productTopRight">
@@ -52,35 +54,11 @@ export default function Product() {
                   <span className="productInfoValue">{product.status}</span>
                 </div>
                 <div className="productInfoItem">
-                  <span className="productInfoKey">Stock quantity:</span>
-                  <span className="productInfoValue">{product.quantity}</span>
+                  <span className="productInfoKey">Type:</span>
+                  <span className="productInfoValue">{product.type}</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="productBottom">
-            <form className="productForm">
-              <div className="productFormLeft">
-                <label>Product Name</label>
-                <input type="text" value={product.productname} />
-                <label>In Stock</label>
-                <select name="inStock" id="idStock">
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-                <label>Active</label>
-                <select name="active" id="active">
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </div>
-              <div className="productFormRight">
-                <div className="productUpload">
-                  <img src={product.img} alt="" className="productUploadImg" />
-                </div>
-                <button className="productButton">Update</button>
-              </div>
-            </form>
           </div>
         </div>
       </div>

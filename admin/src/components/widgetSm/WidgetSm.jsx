@@ -1,81 +1,43 @@
 import "./widgetSm.css";
 import { Visibility } from "@material-ui/icons";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function WidgetSm() {
+  const [newMembers, setNewMembers] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/users?_limit=5")
+      .then((res) => {
+        setNewMembers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className="widgetSm">
       <span className="widgetSmTitle">New Join Members</span>
       <ul className="widgetSmList">
-        <li className="widgetSmListItem">
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">Surya</span>
-            <span className="widgetSmUserTitle">Seller</span>
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
-        </li>
-        <li className="widgetSmListItem">
-          {/* <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-            className="widgetSmImg"
-          /> */}
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">Surya</span>
-            <span className="widgetSmUserTitle">Seller</span>
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
-        </li>
-        <li className="widgetSmListItem">
-          {/* <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-            className="widgetSmImg"
-          /> */}
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">Surya</span>
-            <span className="widgetSmUserTitle">Seller</span>
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
-        </li>
-        <li className="widgetSmListItem">
-          {/* <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-            className="widgetSmImg"
-          /> */}
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">Surya</span>
-            <span className="widgetSmUserTitle">Seller</span>
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
-        </li>
-        <li className="widgetSmListItem">
-          {/* <img
-            src="https://images.pexels.com/photos/3992656/pexels-photo-3992656.png?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-            className="widgetSmImg"
-          /> */}
-          <div className="widgetSmUser">
-            <span className="widgetSmUsername">Surya</span>
-            <span className="widgetSmUserTitle">Seller</span>
-          </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
-        </li>
+        {newMembers.map((user) => {
+          return (
+            <li className="widgetSmListItem">
+              <div className="widgetSmUser">
+                <span className="widgetSmUsername">{user.username}</span>
+                <span className="widgetSmUserTitle">{user.usertype}</span>
+              </div>
+              <Link to={`/user/${user.id}`}>
+                <button className="widgetSmButton">
+                  <Visibility className="widgetSmIcon" />
+                  Display
+                </button>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
