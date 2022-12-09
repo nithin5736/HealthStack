@@ -3,6 +3,7 @@
 Install dependencies
 
 Open a new terminal
+<br />
 cd /admin 
 <br />
 npm isntall
@@ -10,6 +11,7 @@ npm isntall
 npm start
 
 Open another new terminal
+<br />
 cd /client
 <br />
 npm install
@@ -17,6 +19,7 @@ npm install
 npm start
 
 Open another new terminal
+<br />
 cd /server
 <br />
 npm install
