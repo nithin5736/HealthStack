@@ -20,9 +20,7 @@ cd /client
 npm install
 <br />
 npm start
-<br />
-------------------------------------------------------------------------------------------------------
-<br />
+<hr />
 - To run server
 Open another new terminal
 <br />
@@ -31,9 +29,7 @@ cd /server
 npm install
 <br />
 npm start
-<br />
-------------------------------------------------------------------------------------------------------
-<br />
+<hr />
 Youtube Link - https://youtu.be/S-XIsJOWeJI
 <br />
 Deployed Link - https://health-stack-client-9d2a-m3t93e9cj-nithin5736.vercel.app/
