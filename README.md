@@ -2,7 +2,8 @@
 
 - Make sure to install node
 - Install dependencies
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- To open Admin Dashboard
 Open a new terminal
 <br />
 cd /admin 
@@ -10,7 +11,8 @@ cd /admin
 npm isntall
 <br />
 npm start
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- To open main HealthStack website
 Open another new terminal
 <br />
 cd /client
@@ -18,7 +20,8 @@ cd /client
 npm install
 <br />
 npm start
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- To run server
 Open another new terminal
 <br />
 cd /server
@@ -27,7 +30,7 @@ npm install
 <br />
 npm start
 <br />
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 Youtube Link - https://youtu.be/S-XIsJOWeJI
 <br />
 Deployed Link - https://health-stack-client-9d2a-m3t93e9cj-nithin5736.vercel.app/
