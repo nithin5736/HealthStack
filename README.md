@@ -11,9 +11,7 @@ cd /admin
 npm isntall
 <br />
 npm start
-<br />
-------------------------------------------------------------------------------------------------------
-<br />
+<hr />
 - To open main HealthStack website
 Open another new terminal
 <br />
