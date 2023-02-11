@@ -2,8 +2,7 @@
 
 - Make sure to install node
 - Install dependencies
------------------------------------------------------------------------------------------------------
-<br />
+<hr />
 - To open Admin Dashboard
 Open a new terminal
 <br />
