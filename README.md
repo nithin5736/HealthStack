@@ -1,6 +1,7 @@
 # HealthStack
 
-Install dependencies
+- Make sure to install node
+- Install dependencies
 
 Open a new terminal
 <br />
