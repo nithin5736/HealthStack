@@ -32,5 +32,5 @@ npm start
 <hr />
 Youtube Link - https://youtu.be/S-XIsJOWeJI
 <br />
-Deployed Link - https://health-stack-client-9d2a-m3t93e9cj-nithin5736.vercel.app/
+Deployed Link - https://mern-health-stack-client-pftl-4ec9ef8pz-nithin5736s-projects.vercel.app/
 
